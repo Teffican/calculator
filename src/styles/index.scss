@@ -1,0 +1,32 @@
+$background: #17171C;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    background: $background;
+    color: #fff;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.05);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,255,255,.05); 
+}
