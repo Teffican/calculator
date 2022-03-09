@@ -29,12 +29,14 @@ $btn-secondary: #4E505F;
         font-size: 40px;
         line-height: 47px;
         font-weight: 300;
+        min-height: 47px;
     }
     &__answer{
         font-size: 80px;
         line-height: 96px;
         overflow-x: auto;
         white-space: nowrap;
+        min-height: 96px;
     }
     &__button{
         &-list{
