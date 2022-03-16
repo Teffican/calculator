@@ -1,19 +1,21 @@
-import calculate from "../calculate";
-import getPrettyNum from "../getPrettyNum";
-import { answerDisplay, expressionDisplay } from "../../index";
-import { changeExpression, expression } from "../handleClick";
+import calculate from '../calculate';
+import getPrettyNum from '../getPrettyNum';
 
-const equal = () => {
-    // not accepted if right operand missing
-    if(!expression.rightOperand) return;
+const expressionDisplay = document.querySelector('.calculator__expression');
+const answerDisplay = document.querySelector('.calculator__answer');
 
-    answerDisplay.innerText = getPrettyNum(calculate(expression))
-    expressionDisplay.innerText += expression.rightOperand + '='
-    changeExpression({
-        leftOperand: calculate(expression).toString(), 
-        sign: '', 
-        rightOperand: ''
-    })
-}
+const equal = (changeExpression, expression) => {
+  // not accepted if right operand missing
+  if (!expression.rightOperand) return;
 
-export default equal
+  answerDisplay.innerText = getPrettyNum(calculate(expression));
+  expressionDisplay.innerText += `${expression.rightOperand}=`;
+
+  changeExpression({
+    leftOperand: calculate(expression).toString(),
+    sign: '',
+    rightOperand: '',
+  });
+};
+
+export default equal;

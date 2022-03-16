@@ -1,5 +1,3 @@
-const getPrettyNum = (num) => {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-}
+const getPrettyNum = (num) => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 
-export default getPrettyNum
+export default getPrettyNum;
